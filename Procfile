@@ -1,1 +1,0 @@
-web:streamlit run streamlit_host.py
