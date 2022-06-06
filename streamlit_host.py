@@ -5,15 +5,20 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2,preprocess_input as mobilenet_v2_preprocess_input
 
-model = tf.keras.models.load_model("saved_model/coffe_model.hdf5")
+model = tf.keras.models.load_model("saved_model/animal_model.hdf5")
 ### load file
 uploaded_file = st.file_uploader("Choose a image file", type="jpg")
 
-map_dict = {0: 'Cerscospora',
-            1: 'Healthy',
-            2: 'Leaf rust',
-            3: 'Miner',
-            4: 'Phoma'}
+map_dict = {0: 'dog',
+            1: 'horse',
+            2: 'elephant',
+            3: 'butterfly',
+            4: 'chicken',
+            5: 'cat',
+            6: 'cow',
+            7: 'sheep',
+            8: 'spider',
+            9: 'squirrel'}
 
 
 if uploaded_file is not None:
