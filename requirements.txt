@@ -1,4 +1,5 @@
-streamlit==0.80.0
+streamlit==1.8.1
 tensorflow-cpu==2.5.0
 protobuf==3.20.1
 opencv-python-headless==4.5.1.48
+click==8.0.4
