@@ -1,4 +1,3 @@
 streamlit==0.80.0
-tensorflow-cpu==2.5.0
-opencv-python-headless==4.5.3.56
-
+tensorflow-cpu==2.5.0rc1
+opencv-python-headless==4.5.1.48
