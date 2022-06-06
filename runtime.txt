@@ -1,4 +1,1 @@
-python-3.9.9
-pip 21.3.1 
-setuptools 57.5.0
-wheel 0.37.0
+python-3.9.1
