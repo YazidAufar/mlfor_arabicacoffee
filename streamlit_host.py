@@ -32,10 +32,10 @@ indo_dict = {0: 'anjing',
              9: 'tupai'}
 
 coffee_dict = {0: 'Cerscospora',
-            1: 'Healthy',
-            2: 'Leaf rust',
-            3: 'Miner',
-            4: 'Phoma'}
+               1: 'Healthy',
+               2: 'Leaf rust',
+               3: 'Miner',
+               4: 'Phoma'}
 
 
 if uploaded_file is not None:
@@ -53,4 +53,4 @@ if uploaded_file is not None:
     Genrate_pred = st.button("Generate Prediction")    
     if Genrate_pred:
         prediction = model.predict(img_reshape).argmax()
-        st.title('Sepertinya gambar ini adalah {}'.format(coffee_dict[prediction]))
+        st.title('Sepertinya gambar ini adalah {}'.format(indo_dict[prediction]))
