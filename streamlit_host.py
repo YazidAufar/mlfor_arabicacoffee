@@ -20,6 +20,17 @@ map_dict = {0: 'dog',
             8: 'spider',
             9: 'squirrel'}
 
+indo_dict = {0: 'anjing',
+             1: 'kuda',
+             2: 'gajah',
+             3: 'kupu-kupu',
+             4: 'ayam',
+             5: 'kucing',
+             6: 'sapi',
+             7: 'kambing',
+             8: 'laba-laba',
+             9: 'tupai'}
+
 
 if uploaded_file is not None:
     # Convert the file to an opencv image.
@@ -36,4 +47,4 @@ if uploaded_file is not None:
     Genrate_pred = st.button("Generate Prediction")    
     if Genrate_pred:
         prediction = model.predict(img_reshape).argmax()
-        st.title("Predicted Label for the image is {}".format(map_dict [prediction]))
+        st.title('Sepertinya gambar ini adalah {}'.format(indo_dict[prediction]))
