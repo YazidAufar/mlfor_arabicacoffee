@@ -5,7 +5,7 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2,preprocess_input as mobilenet_v2_preprocess_input
 
-model = tf.keras.models.load_model("saved_model/mdl_wts.hdf5")
+model = tf.keras.models.load_model("saved_model/coffe_model.hdf5")
 ### load file
 uploaded_file = st.file_uploader("Choose a image file", type="jpg")
 
@@ -31,6 +31,12 @@ indo_dict = {0: 'anjing',
              8: 'laba-laba',
              9: 'tupai'}
 
+coffee_dict = {0: 'Cerscospora',
+            1: 'Healthy',
+            2: 'Leaf rust',
+            3: 'Miner',
+            4: 'Phoma'}
+
 
 if uploaded_file is not None:
     # Convert the file to an opencv image.
@@ -47,4 +53,4 @@ if uploaded_file is not None:
     Genrate_pred = st.button("Generate Prediction")    
     if Genrate_pred:
         prediction = model.predict(img_reshape).argmax()
-        st.title('Sepertinya gambar ini adalah {}'.format(indo_dict[prediction]))
+        st.title('Sepertinya gambar ini adalah {}'.format(coffee_dict[prediction]))
